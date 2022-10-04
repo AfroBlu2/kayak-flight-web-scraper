@@ -11,5 +11,12 @@ chromedriver_path = '/Users/kenton/Documents/Programming/Personal Projects/Web S
 driver = webdriver.Chrome(executable_path=chromedriver_path)
 sleep(2)
 
-kayak = ''
+kayak = 'https://www.ca.kayak.com/flights/YQB-ATH/2023-03-12-flexible-3days/2023-03-18-flexible-3days?sort=bestflight_a'
+driver.get(kayak)
+
+# MIGHT NEED TO TARGET THIS IN ANOTHER WAY IF CLASS ENDS UP BEING DYNAMIC GOOGLE SEARCH XPATHS
+xp_popup_close = 'bBPb-closeIcon'
+print(xp_popup_close)
+driver.find_element_by_class_name(xp_popup_close).click()
+
 
